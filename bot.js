@@ -23,7 +23,7 @@ const board = new five.Board({
 app.use('/static', express.static(path.join(__dirname, 'public')))
 
 // Direct users to /public
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/public/index.html'));
 })
 
@@ -101,10 +101,10 @@ board.on("ready", () => {
   }
 
   // Control Sockets
-  socketIO.on('connection', function (socket) {
+  socketIO.on('connection', (socket) => {
 
     // Modifies the motor speed
-    socket.on('changeSpeed', function(speed) {
+    socket.on('changeSpeed', (speed) => {
       settings.setSpeed(speed);
     });
 
@@ -117,6 +117,6 @@ board.on("ready", () => {
   });
 
   // Log access address
-  console.log('Up and running on ' + address + ' on port ' + port);
+  console.log('Robot interface available @ ' + address + ':' + port);
 
 });

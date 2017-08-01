@@ -1,109 +1,108 @@
 (function() {
-    var state = document.readyState;
+    const state = document.readyState;
 
-    // Make sure that the document can be interacted with
+    // Make sure that the document can be interacted with.
     if (state === 'interactive' || state === 'complete') {
    
         // Variables
-        var left = document.getElementById('left');
-        var right = document.getElementById('right');
-        var forward = document.getElementById('forward');
-        var reverse = document.getElementById('reverse');
-        var speedRange = document.getElementById('speed-range');
-        var horn = document.getElementById('horn');
+        const 
+            left = document.getElementById('left'),
+            right = document.getElementById('right'),
+            forward = document.getElementById('forward'),
+            reverse = document.getElementById('reverse'),
+            speedRange = document.getElementById('speed-range'),
+            horn = document.getElementById('horn'),
+            socket = io()
 
-        // Initiate the socket connection!
-        var socket = io()
-
-        // Adjusts the current speed of the robot
+        // Adjusts the current speed of the robot.
         speedRange.onchange = () => {
-            var value = speedRange.value;
+            let value = speedRange.value;
 
             socket.emit('changeSpeed', value);
         };
 
-        // If touch controls are available use them, otherwise use mouse controls
+        // If touch controls are available use them, otherwise use mouse controls.
         if ('ontouchstart' in window) {
 
-            horn.addEventListener('touchstart', function() {
+            horn.addEventListener('touchstart', () => {
                 socket.emit('startHorn');
             })
 
-            horn.addEventListener('touchend', function () {
+            horn.addEventListener('touchend', () => {
                 socket.emit('stopHorn');
             })
 
-            forward.addEventListener('touchstart', function () {
+            forward.addEventListener('touchstart', () => {
                 socket.emit('moveForward');
             })
 
-            forward.addEventListener('touchend', function () {
+            forward.addEventListener('touchend', () => {
                 socket.emit('stopMotors');
             })
 
-            reverse.addEventListener('touchstart', function () {
+            reverse.addEventListener('touchstart', () => {
                 socket.emit('moveBack');
             })
 
-            reverse.addEventListener('touchend', function () {
+            reverse.addEventListener('touchend', () => {
                 socket.emit('stopMotors');
             })
 
-            left.addEventListener('touchstart', function () {
+            left.addEventListener('touchstart', () => {
                 socket.emit('moveLeft');
             })
 
-            left.addEventListener('touchend', function () {
+            left.addEventListener('touchend', () => {
                 socket.emit('stopMotors');
             })
 
-            right.addEventListener('touchstart', function () {
+            right.addEventListener('touchstart', () => {
                 socket.emit('moveRight');
             })
 
-            right.addEventListener('touchend', function () {
+            right.addEventListener('touchend', () => {
                 socket.emit('stopMotors');
             })
 
         } else {
 
-            horn.addEventListener('mousedown', function() {
+            horn.addEventListener('mousedown', () => {
                 socket.emit('startHorn');
             })
 
-            horn.addEventListener('mouseup', function() {
+            horn.addEventListener('mouseup', () => {
                 socket.emit('stopHorn');
             })
 
-            forward.addEventListener('mousedown', function() {
+            forward.addEventListener('mousedown', () => {
                 socket.emit('moveForward');
             })
 
-            forward.addEventListener('mouseup', function() {
+            forward.addEventListener('mouseup', () => {
                 socket.emit('stopMotors');
             })
 
-            reverse.addEventListener('mousedown', function() {
+            reverse.addEventListener('mousedown', () => {
                 socket.emit('moveBack');
             })
 
-            reverse.addEventListener('mouseup', function() {
+            reverse.addEventListener('mouseup', () => {
                 socket.emit('stopMotors');
             })
 
-            left.addEventListener('mousedown', function() {
+            left.addEventListener('mousedown', () => {
                 socket.emit('turnLeft');
             })
 
-            left.addEventListener('mouseup', function() {
+            left.addEventListener('mouseup', () => {
                 socket.emit('stopMotors');
             })
 
-            right.addEventListener('mousedown', function() {
+            right.addEventListener('mousedown', () => {
                 socket.emit('turnRight');
             })
 
-            right.addEventListener('mouseup', function() {
+            right.addEventListener('mouseup', () => {
                 socket.emit('stopMotors');
             })
         }
