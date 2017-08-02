@@ -54,7 +54,7 @@ board.on("ready", () => {
     motorLeft.speed(speed);
     motorRight.speed(speed / 3);
 
-    // Debug
+    // Controller Debug
     console.log("Turning Left @ " + speed);
   }
 
@@ -65,7 +65,7 @@ board.on("ready", () => {
     motorLeft.speed(speed / 3);
     motorRight.speed(speed);
 
-    // Debug
+    // Controller Debug
     console.log("Turning Right @ " + speed);
   }
 
@@ -76,7 +76,7 @@ board.on("ready", () => {
     motorLeft.reverse(speed);
     motorRight.forward(speed);
 
-    // Debug
+    // Controller Debug
     console.log("Moving Forward @ " + speed);
   }
 
@@ -87,7 +87,7 @@ board.on("ready", () => {
     motorLeft.forward(speed);
     motorRight.reverse(speed);
 
-    // Debug
+    // Controller Debug
     console.log("Moving Backwards @ " + speed);
   }
 
@@ -96,7 +96,7 @@ board.on("ready", () => {
     motorLeft.stop();
     motorRight.stop();
 
-    // Debug
+    // Controller Debug
     console.log("Stopping All Motors");
   }
 
@@ -106,6 +106,9 @@ board.on("ready", () => {
     // Modifies the motor speed
     socket.on('changeSpeed', (speed) => {
       settings.setSpeed(speed);
+
+      // Speed Debug
+      console.log('Speed has been set to ' + settings.getSpeed());
     });
 
     socket.on('turnRight', turnRight);

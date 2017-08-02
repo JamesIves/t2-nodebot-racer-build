@@ -1,12 +1,14 @@
+'use strict';
+
 var settings = {
   speed: 100,
  };
 
 module.exports = {
-    setSpeed : function(value) {
+    setSpeed : (value) => {
        settings.speed = value;
      },
-    getSpeed : function(){
+    getSpeed : () => {
       return settings.speed;
     }
 };

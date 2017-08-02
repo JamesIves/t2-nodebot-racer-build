@@ -11,7 +11,6 @@
             forward = document.getElementById('forward'),
             reverse = document.getElementById('reverse'),
             speedRange = document.getElementById('speed-range'),
-            horn = document.getElementById('horn'),
             socket = io()
 
         // Adjusts the current speed of the robot.
@@ -23,15 +22,6 @@
 
         // If touch controls are available use them, otherwise use mouse controls.
         if ('ontouchstart' in window) {
-
-            horn.addEventListener('touchstart', () => {
-                socket.emit('startHorn');
-            })
-
-            horn.addEventListener('touchend', () => {
-                socket.emit('stopHorn');
-            })
-
             forward.addEventListener('touchstart', () => {
                 socket.emit('moveForward');
             })
@@ -49,7 +39,7 @@
             })
 
             left.addEventListener('touchstart', () => {
-                socket.emit('moveLeft');
+                socket.emit('turnLeft');
             })
 
             left.addEventListener('touchend', () => {
@@ -57,7 +47,7 @@
             })
 
             right.addEventListener('touchstart', () => {
-                socket.emit('moveRight');
+                socket.emit('turnRight');
             })
 
             right.addEventListener('touchend', () => {
@@ -65,15 +55,6 @@
             })
 
         } else {
-
-            horn.addEventListener('mousedown', () => {
-                socket.emit('startHorn');
-            })
-
-            horn.addEventListener('mouseup', () => {
-                socket.emit('stopHorn');
-            })
-
             forward.addEventListener('mousedown', () => {
                 socket.emit('moveForward');
             })
