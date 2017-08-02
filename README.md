@@ -57,4 +57,4 @@ Speed Slider: Adjusts the speed of the motors from a range of 150 to 255.
 ![Controls](public/assets/controls.png)
 
 ## Credits
-This project was built with the assistance of examples provided by the [NodeJS Houston community](http://www.nodejshouston.com/). Thank you for an awesome event!
+This project was built with the assistance of examples provided by the [NodeJS Houston community](http://www.nodejshouston.com/). Thank you for hosting an awesome event!
