@@ -4,7 +4,7 @@ This is the code for a Nodebot racer build I worked on with Amelia during Node B
 ![Controls](public/assets/robot.jpg)
 
 ## Hardware Requirements
-In order to utilize this project you'll need a [Tessel 2](https://tessel.io/), an [L298N Motor Driver](https://www.sparkfun.com/products/9670), a USB battery pack, two compatible DC motors, and some wheels.
+In order to build this robot you'll need a [Tessel 2](https://tessel.io/), an [L298N Motor Driver](https://www.sparkfun.com/products/9670), a USB battery pack, some form of chasis, two compatible DC motors, and some wheels.
 
 
 ## Software Requirements
