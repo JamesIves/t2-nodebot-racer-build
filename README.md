@@ -1,5 +1,5 @@
 # Tessel 2 Nodebot Racer Build (Aka Montezooma)
-This is the code for a Node Bot racer build I worked on with Amelia during Node Bots Day 2017 in Houston, Texas. It runs using a [Tessel 2](https://tessel.io/) and NodeJS, and allows a user connected to its access point to control its direction and speed.
+This is the code for a Node Bot racer build I worked on with Amelia during Node Bots Day 2017 in Houston, Texas. It runs using a [Tessel 2](https://tessel.io/) and NodeJS, and allows a user connected to its access point to control its direction and speed. You can watch a video of it in action [here](https://www.youtube.com/watch?v=JdDaeLKfwb0).
 
 ![Controls](public/assets/robot.jpg)
 
