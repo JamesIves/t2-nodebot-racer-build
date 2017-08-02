@@ -40,17 +40,18 @@ $ t2 push bot.js
 
 Once the files are done pushing to the Tessel you can now unplug the Tessel from your device and instead rely on battery power.
 
-On either your computer or phone connect to the access point you created. Navigate in your browser to the IP that was confirmed in the terminal when you pushed `bot.js` to the Tessel and if everything has been succesful you should now be able to control the robot using the provided controls.
 
 ## Controls
+Using your device connect to the access point you created during the setup instructions and navigate your browser to the IP that was logged to the terminal when you pushed `bot.js` to the Tessel. If everything was succesful you should now see the robot web controller.
+
 The web controller has a set of simple commands for you to control the robot. 
 
 ```
-**Up Arrow**: Moves the robot forward
-**Down Arrow**: Moves the robot back
-**Right Arrow**: Moves the robot to the right
-**Left Arrow**: Moves the robot to the left
-**Speed Slider**: Adjusts the speed of the motors
+Up Arrow: Moves the robot forward.
+Down Arrow: Moves the robot back.
+Right Arrow: Moves the robot to the right.
+Left Arrow: Moves the robot to the left.
+Speed Slider: Adjusts the speed of the motors from a range of 150 to 255.
 ```
 
 ![Controls](public/assets/controls.png)
