@@ -21,17 +21,17 @@ You'll also need to run `npm install` within the project directory to download t
 ## Setup
 With your Tessel 2 connected to your computer via USB run the following commands in your terminal.
 
-```
+```bash
 # Confirm your Tessel 2 can be seen by your computer.
-$ t2 list
+$t2 list
 
 # Rename the Tessel 2, replace <name> with whatever you want.
 $ t2 rename <name>
 
-# Provision the Device.
+# Provision the device.
 $ t2 provision
 
-# Setup an Access Point, repalce name and password with whatever you want.
+# Setup an access point, repalce name and password with whatever you want.
 $ t2 ap -n Name -p Password
 
 # Push the project files to the Tessel 2.
