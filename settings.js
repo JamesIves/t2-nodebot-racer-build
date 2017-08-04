@@ -1,6 +1,6 @@
 'use strict';
 
-var settings = {
+let settings = {
   speed: 100,
  };
 
