@@ -1,13 +1,13 @@
-# Tessel 2 Nodebot Racer Build (Aka Montezooma)
+# Tessel 2 Nodebot Racer Build (Aka Montezooma) 🤖🔌
 This is the code for a Nodebot racer build I worked on during Node Bots Day 2017 in Houston, Texas. It runs using a [Tessel 2](https://tessel.io/) and NodeJS, and allows a user connected to its access point to control its direction and speed. You can watch a video of it in action [here](https://www.youtube.com/watch?v=JdDaeLKfwb0).
 
 ![Controls](public/assets/robot.jpg)
 
-## Hardware Requirements
+## Hardware Requirements :wrench:
 In order to build this robot you'll need a [Tessel 2](https://tessel.io/), an [L298N Motor Driver](https://www.sparkfun.com/products/9670), a USB battery pack, some form of chasis, two compatible DC motors, and some wheels. Mine was built using an [ActoBotics Peewee](https://www.servocity.com/peewee).
 
 
-## Software Requirements
+## Software Requirements :floppy_disk:
 #### Node Version
 This project requires NodeJS version `4.5.0`, if you have [nvm](https://github.com/creationix/nvm) installed you can simply run `nvm  use` within the project directory to switch versions.
 
@@ -18,7 +18,7 @@ You'll need version `0.1.4` of the `t2-cli` package to interface with the Tessel
 You'll also need to run `npm install` within the project directory to download the required dependencies.
 
 
-## Setup
+## Installation Steps 💽
 With your Tessel 2 connected to your computer via USB run the following commands in your terminal.
 
 ```bash
@@ -41,7 +41,7 @@ $ t2 push bot.js
 Once the files are done pushing to the Tessel 2 you can now unplug the Tessel 2 from your device and instead rely on battery power.
 
 
-## Controls
+## Controls :video_game:
 Using your device connect to the access point you created during the setup instructions and navigate your browser to the IP that was logged to the terminal when you pushed `bot.js` to the Tessel 2. If everything was succesful you should now see the robot web controller.
 
 The web controller has a set of simple commands for you to control the robot. 
@@ -56,5 +56,5 @@ Speed Slider: Adjusts the speed of the motors from a range of 150 to 255.
 
 ![Controls](public/assets/controls.png)
 
-## Credits
+### Credits 
 This project was built with the assistance of examples provided by the [NodeJS Houston community](http://www.nodejshouston.com/). Thank you for hosting an awesome event!
