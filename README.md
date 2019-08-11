@@ -23,7 +23,7 @@ With your Tessel 2 connected to your computer via USB run the following commands
 
 ```bash
 # Confirm your Tessel 2 can be seen by your computer.
-$t2 list
+$ t2 list
 
 # Rename the Tessel 2, replace <name> with whatever you want.
 $ t2 rename <name>
